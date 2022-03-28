@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name:  wil-playground-application
+  name: wil-playground
   namespace: argocd
 spec:
   project: default
@@ -14,7 +14,7 @@ spec:
     namespace: dev
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true
+      - CreateNamespace=true
 
     automated:
       selfHeal: true
